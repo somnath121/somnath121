@@ -1,16 +1,32 @@
-## Hi there 👋
+Somnath Chatterjee
+Principal iOS Engineer → AI Engineering
 
-<!--
-**somnath121/somnath121** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Building local, privacy-first developer intelligence.
 
-Here are some ideas to get you started:
+┌───────────────────────────────────────────┐
+│  LocalAI                                  │
+│                                           │
+│  Swift + MLX                              │
+│       ↓                                   │
+│  Qwen                                     │
+│       ↓                                   │
+│  Supervisor Agent                         │
+│       ↓                                   │
+│  iOS / Android Specialists                │
+│       ↓                                   │
+│  Graphify Project Intelligence            │
+└───────────────────────────────────────────┘
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Featured Work
+
+⚡ LocalAI
+   Native macOS agentic coding environment
+
+🧠 Graphify
+   AST-based project knowledge graph
+
+🍎 iOS Engineering
+   UIKit • SwiftUI • Performance • Architecture
+
+🤖 Local AI
+   MLX • Qwen • RAG • Agents • Tool Calling
