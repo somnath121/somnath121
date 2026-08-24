@@ -215,13 +215,18 @@ They need **better understanding of the project**.
 # 📊 GitHub
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=somnath121&show_icons=true&hide_border=true&include_all_commits=true&count_private=false" />
+  <img
+    height="170"
+    src="https://github-readme-stats.vercel.app/api?username=somnath121&show_icons=true&hide_border=true&include_all_commits=true&count_private=false"
+  />
 </p>
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=somnath121&layout=compact&hide_border=true" />
+  <img
+    height="170"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=somnath121&layout=compact&hide_border=true"
+  />
 </p>
-
 ---
 
 <p align="center">
