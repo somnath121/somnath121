@@ -1,10 +1,10 @@
-Somnath Chatterjee
+Hi, I’m Somnath 👋
 
 Principal iOS Engineer · Local AI · Developer Intelligence
 
-Exploring how Swift, MLX, local LLMs, and code intelligence can shape the next generation of developer tools.
+I build production iOS systems and explore how Swift, MLX, local LLMs, and code intelligence can be used to create better developer tools.
 
-I come from production iOS engineering and I’m increasingly interested in what happens when mobile engineering, Apple silicon, and local AI converge.
+Currently interested in the engineering around the model — inference, context, code understanding, tools, and agent orchestration.
 
 <p>
   <img src="https://img.shields.io/badge/Swift-FA7343?style=flat-square&logo=swift&logoColor=white" />
@@ -13,438 +13,174 @@ I come from production iOS engineering and I’m increasingly interested in what
   <img src="https://img.shields.io/badge/MLX-Apple_Silicon-222222?style=flat-square&logo=apple&logoColor=white" />
   <img src="https://img.shields.io/badge/Local_LLMs-On_Device-6C5CE7?style=flat-square" />
   <img src="https://img.shields.io/badge/Code_Intelligence-AST-00A67E?style=flat-square" />
-  <img src="https://img.shields.io/badge/Agentic_AI-Developer_Tooling-8E44AD?style=flat-square" />
 </p>
 
 ⸻
 
-👋 About me
+🍎 Exploring Local AI
 
-I’m a Principal iOS Engineer focused on building production mobile systems with Swift, UIKit, and SwiftUI.
+I’m experimenting with local AI on Apple silicon, particularly MLX and native Swift integration.
 
-Alongside mobile engineering, I’m exploring local AI and developer intelligence — particularly how smaller models running on Apple silicon can become more capable when they’re supported by better context, tools, and codebase understanding.
+The interesting question for me isn’t only:
 
-The part that interests me isn’t simply connecting an application to an LLM.
+Can we run a capable model locally?
 
-It’s the engineering around the model.
+It’s:
 
-             Developer
-                 │
-                 ▼
-        Developer Intelligence
-                 │
-      ┌──────────┼──────────┐
-      ▼          ▼          ▼
-   Context      Tools    Reasoning
-      │          │          │
-      └──────────┼──────────┘
-                 ▼
-             Local LLM
-                 │
-                 ▼
-                MLX
-                 │
-                 ▼
-          Apple Silicon
+How do we engineer the system around a local model so it can do more with less?
+
+Some areas I’m exploring:
+
+* MLX and local inference
+* Qwen and other local models
+* Time to first token (TTFT)
+* Token generation performance
+* Quantization and memory trade-offs
+* Streaming generation
+* Tokenization
+* Model lifecycle and caching
+* Native Swift integration
 
 ⸻
 
-🍎 Exploring MLX
+🧠 Better Context, Not More Context
 
-I’m experimenting with MLX as a native foundation for local AI on Apple silicon.
+Coding agents often spend a significant amount of work discovering a project:
 
-Running a model locally is only the starting point.
+Search → Read → Search → Read → Build Context → Reason
 
-I’m interested in understanding how the layers below an AI application influence the experience above it:
+I’m interested in another approach:
 
-             Apple Silicon
-                   │
-                   ▼
-                  MLX
-                   │
-         ┌─────────┼─────────┐
-         ▼         ▼         ▼
-      Models     Memory   Inference
-         │         │         │
-         └─────────┼─────────┘
-                   ▼
-               Local LLM
-                   │
-                   ▼
-            Developer Tools
+Source Code → AST → Structured Knowledge → Relevant Context → Model
 
-Areas I’m exploring
-
-* ⚡ Time to first token
-* 🚀 Token generation throughput
-* 🧠 Unified memory behavior
-* 📦 Model loading and lifecycle
-* 🗜️ Quantization trade-offs
-* 🌊 Streaming generation
-* 🔤 Tokenization
-* 🧩 Swift integration
-* 📊 Memory vs latency trade-offs
-* 💻 Running capable models on consumer Apple silicon
-
-The question isn’t only:
-
-Can this model run locally?
-
-It’s also:
-
-How do we engineer the system around a local model so the model doesn’t need to solve everything itself?
-
-⸻
-
-🧠 Context engineering
-
-One area I’m particularly interested in is codebase understanding.
-
-Traditional LLM workflows often treat a repository primarily as text:
-
-Large Repository
-       │
-       ▼
-     Search
-       │
-       ▼
-   Read Files
-       │
-       ▼
- Search Again
-       │
-       ▼
-  More Files
-       │
-       ▼
- Bigger Context
-       │
-       ▼
-      LLM
-
-That works — but I’m interested in what happens if we understand the structure of the project first.
-
-Source Code
-     │
-     ▼
-    AST
-     │
-     ▼
-Structured Knowledge
-     │
-     ▼
-Relevant Context
-     │
-     ▼
-    LLM
-
-Instead of continuously increasing the amount of context, retrieve the part of the codebase that actually matters.
+The idea is simple:
 
 Don’t give the model more context. Give it better context.
 
-This becomes particularly interesting with local models, where context size, memory usage, and inference latency directly affect the developer experience.
+Instead of treating a repository purely as text, source structure can provide useful information about:
+
+* types
+* symbols
+* dependencies
+* references
+* protocols
+* relationships
+* architecture
+
+This becomes especially interesting for smaller local models, where every unnecessary token has a cost.
 
 ⸻
-
-🕸️ Code intelligence
-
-Source code contains much more information than its raw text.
-
-There are:
-
-Types
-  │
-  ├── Methods
-  │
-  ├── Properties
-  │
-  └── Protocols
-Modules
-  │
-  └── Dependencies
-Symbols
-  │
-  └── References
-Components
-  │
-  └── Relationships
-
-I’m exploring how compiler and source-code information can become part of an AI developer system.
-
-Areas of interest
-
-ASTs · Symbols · Types · Dependencies
-Code Graphs · Project Knowledge · Semantic Retrieval
-
-The interesting transition is:
-
-Source Code
-     ↓
-Syntax
-     ↓
-Structure
-     ↓
-Relationships
-     ↓
-Project Knowledge
-     ↓
-AI Context
-
-The goal is developer tooling that understands how a project is connected, rather than treating the repository as an unrelated collection of files.
-
-⸻
-
-🎯 Context over context windows
-
-More context isn’t always better context.
-
-I’m interested in systems where:
-
-Repository
-    │
-    ▼
-Project Intelligence
-    │
-    ▼
-Relevant Knowledge
-    │
-    ▼
-Focused Context
-    │
-    ▼
-Local Model
-
-instead of:
-
-Repository
-    │
-    ▼
-More Files
-    │
-    ▼
-More Tokens
-    │
-    ▼
-More Context
-    │
-    ▼
-LLM
-
-Especially for local inference, reducing unnecessary context can potentially mean:
-
-less processing · lower memory pressure · faster responses · better signal
-
-⸻
-
-🤖 Agents, tools, and boundaries
-
-I’m also exploring where agents should — and shouldn’t — be used.
-
-Not every operation needs another LLM call.
-
-                  Request
-                     │
-                     ▼
-                 Reasoning
-                     │
-          ┌──────────┼──────────┐
-          ▼          ▼          ▼
-        Tools      Context    Agents
-          │          │          │
-          └──────────┼──────────┘
-                     ▼
-                   Result
-
-Some problems need reasoning.
-
-Some need retrieval.
-
-Some need domain knowledge.
-
-And some just need a deterministic tool.
-
-A large part of agent engineering is deciding:
-
-Which layer should own the work?
-
-⸻
-
-🧩 Tools vs agents
-
-I’m particularly interested in separating deterministic capabilities from reasoning capabilities.
-
-                AI System
-                    │
-         ┌──────────┴──────────┐
-         │                     │
-         ▼                     ▼
-       Tools                 Agents
-         │                     │
-   Deterministic           Reasoning
-   Operations              Decisions
-         │                     │
-         └──────────┬──────────┘
-                    ▼
-                  Result
-
-File discovery doesn’t necessarily need an agent.
-
-Parsing source code doesn’t necessarily need an agent.
-
-Building project structure doesn’t necessarily need an agent.
-
-But understanding a developer’s intent often does.
-
-Keeping these boundaries clear can make local AI systems faster, more predictable, and easier to reason about.
-
-⸻
-
-🔐 Local-first AI
-
-Local inference also creates an interesting architectural property:
-
-Privacy can become part of the architecture rather than an additional layer.
-
-I’m interested in systems where:
-
-* inference stays local
-* project context stays local
-* filesystem access is explicit
-* tools operate within defined boundaries
-* models receive only the context they need
-* network access isn’t assumed
-
-For developer tooling, this becomes particularly interesting when working with private or proprietary codebases.
-
-⸻
-
-⚡ Local AI is a systems problem
-
-The model is important.
-
-But it’s only one layer.
-
-┌─────────────────────────────────────────┐
-│          Developer Experience           │
-├─────────────────────────────────────────┤
-│       Agents · Skills · Reasoning       │
-├─────────────────────────────────────────┤
-│        Tools · Orchestration            │
-├─────────────────────────────────────────┤
-│     Retrieval · Code Intelligence       │
-├─────────────────────────────────────────┤
-│         Context Engineering             │
-├─────────────────────────────────────────┤
-│          Local Inference · MLX          │
-├─────────────────────────────────────────┤
-│             Apple Silicon               │
-└─────────────────────────────────────────┘
-
-Better models matter.
-
-But so do:
-
-Inference · Retrieval · Tools · Graphs · Context · Orchestration · Security
-
-That’s the part of local AI I’m most interested in exploring.
-
-⸻
-
-🛠 Engineering focus
-
-📱 Mobile Engineering
-
-Swift · UIKit · SwiftUI
-
-Architecture · Concurrency · Performance
-
-🍎 Local AI
-
-MLX · Local LLMs · Inference
-
-Quantization · Streaming · Tokenization
 
 🕸️ Code Intelligence
 
-AST · Code Graphs · Project Knowledge
+I’m exploring how traditional compiler and static-analysis concepts can contribute to AI developer tooling.
 
-Context Retrieval · Context Engineering
+ASTs · Symbols · Types · Dependencies · Code Graphs · Semantic Retrieval
 
-🤖 Agentic Systems
+A codebase already contains structure.
 
-Agents · Tools · Skills
+The interesting problem is turning that structure into useful project knowledge for an AI system.
 
-Orchestration · RAG · Tool Calling
-
-🔐 Local-first Systems
-
-Privacy · Filesystem Boundaries
-
-Controlled Execution · On-device AI
-
-⸻
-
-🔬 Currently exploring
-
-* 🍎 MLX on Apple silicon — local inference beyond simply running a model
-* ⚡ Inference performance — TTFT, generation throughput, memory and model lifecycle
-* 🧠 Smaller models + better systems — improving capability through architecture
-* 🕸️ AST + graph-based intelligence — turning repositories into structured knowledge
-* 🎯 Context engineering — selecting relevant context instead of accumulating it
-* 🔤 Tokenization — understanding the layer between source text and inference
-* 🤖 Agent architecture — reasoning, specialists, skills and deterministic tools
-* 🔧 Native Swift AI tooling — building AI infrastructure directly in Swift
-* 🔐 Privacy-first AI — local inference with explicit capability boundaries
-* 📦 Model experimentation — quantization, memory, latency and capability trade-offs
+Source Code
+    ↓
+   AST
+    ↓
+Project Structure
+    ↓
+Code Intelligence
+    ↓
+Relevant Context
+    ↓
+Local Model
 
 ⸻
 
-💭 A principle I’m exploring
+🤖 Agents vs Tools
 
-        Better Models
-             +
-        Better Context
-             +
-         Better Tools
-             +
-      Better Boundaries
-             ↓
-    Better AI Systems
+I’m also interested in where agents actually belong in a developer system.
 
-The future of developer tooling probably isn’t just about putting a larger model behind an editor.
+Not everything needs an LLM.
 
-It’s also about giving models better representations of the software they’re working with.
+Deterministic work → Tools
+
+File discovery, parsing, indexing, project structure, filesystem operations.
+
+Reasoning work → Agents
+
+Understanding intent, making decisions, planning changes, coordinating capabilities.
+
+Keeping those responsibilities separate can make local AI systems:
+
+faster · more predictable · easier to control
 
 ⸻
 
-🚀 Where I’m heading
+🔐 Local-First Developer Tools
+
+Local inference creates an interesting opportunity for developer tooling.
+
+I’m exploring systems where:
+
+* inference stays local
+* source code stays local
+* filesystem access is explicit
+* tools have defined boundaries
+* models receive only relevant context
+* network access isn’t assumed
+
+Privacy becomes part of the architecture rather than something added afterwards.
+
+⸻
+
+🛠 Engineering Focus
+
+Mobile Engineering
+
+Swift UIKit SwiftUI Architecture Concurrency Performance
+
+Local AI
+
+MLX Local LLMs Inference Quantization Streaming Tokenization
+
+Code Intelligence
+
+AST Code Graphs Project Knowledge Context Retrieval
+
+Agentic Systems
+
+Agents Tools Skills Orchestration RAG
+
+⸻
+
+🔬 Currently Exploring
+
+🍎 MLX on Apple silicon
+⚡ Local inference performance and TTFT
+🧠 Smaller models + better context
+🕸️ AST and graph-based code intelligence
+🎯 Context selection instead of context accumulation
+🤖 Agent orchestration and tool boundaries
+🔧 Native Swift AI tooling
+🔐 Privacy-first developer environments
+
+⸻
+
+💡 How I Think About It
+
+The model is only one part of an AI developer system.
+
+Model + Context + Tools + Code Intelligence + Boundaries
+
+The interesting engineering increasingly happens in how those pieces work together.
+
+⸻
+
+🚀 The Direction
 
 I’ve spent years building software for users.
 
-Now I’m exploring how to build software for the systems that build software.
+Now I’m exploring software for the systems that build software.
 
-Mobile Engineering
-        │
-        ▼
-      Swift
-        │
-        ▼
- Apple Silicon
-        │
-        ▼
-       MLX
-        │
-        ▼
- Local Inference
-        │
-        ▼
-Code Intelligence
-        │
-        ▼
-Agentic Systems
-        │
-        ▼
-Developer Intelligence
 <p align="center">
   <b>Mobile Engineering → Developer Intelligence → Local AI</b>
 </p>
